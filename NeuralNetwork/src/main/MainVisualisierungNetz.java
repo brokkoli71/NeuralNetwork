@@ -3,9 +3,9 @@ package main;
 /*
  * es werden zweidimensionale Elemente mit unterschiedlichen Klassifizierungen 
  * (blau bzw. rot) auf ein Koordinatensystem aufgetragen und das Netz wird auf 
- * die Klassifizierungen in Abhängigkeit zu den Koordinaten trainiert 
+ * die Klassifizierungen in Abhaengigkeit zu den Koordinaten trainiert 
  * 
- * anschließend wird die verbleibende Fläche nach dem selbsterlernten Muster klassifiziert
+ * anschliessend wird die verbleibende Flaeche nach dem selbsterlernten Muster klassifiziert
  * 
  * die eine Visualle Ausgabe stellt den aktuellen Zustand des Netzes dar, die Andere
  * das zweidimensionale Koordinatensystem
@@ -23,7 +23,7 @@ public class MainVisualisierungNetz {
 	static Visualisation v;
 	static Visualisation2 v2;
 	
-	//veränderbare Größen:
+	//veraenderbare Groessen:
 	
 	//neuronales Netz
 	static int anzahlHiddenLayer = 1;
@@ -33,10 +33,10 @@ public class MainVisualisierungNetz {
 	//gui
 	static double updateRateV1 = 0.0001;
 	static double updateRateV2 = 0.0001;
-	static int auflösungV2 = 30;
+	static int aufloesungV2 = 30;
 
 
-	/*Zufällige Daten
+	/*Zufaellige Daten
 	
 	//training Data
 	static int anzahlPunkte = 10;
@@ -57,7 +57,7 @@ public class MainVisualisierungNetz {
 		Netz n = new Netz(trainingData.getInput(0).length, anzahlHiddenNeuron, anzahlHiddenLayer, trainingData.getGoodOutput(0).length);
 		n.LERNRATE = lernrate;
 		v = new Visualisation(n);
-		v2 = new Visualisation2(n, auflösungV2);
+		v2 = new Visualisation2(n, aufloesungV2);
 
 		int counter = 0;
 
