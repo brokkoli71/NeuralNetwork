@@ -19,10 +19,9 @@ public class TrainSet {
         this.OUTPUT_SIZE = 10; 
         
 
-            String path = new File("").getAbsolutePath();
 
-            MnistImageFile m = new MnistImageFile(path + "/res/trainImage.idx3-ubyte", "rw");
-            MnistLabelFile l = new MnistLabelFile(path + "/res/trainLabel.idx1-ubyte", "rw");
+            MnistImageFile m = new MnistImageFile("res/trainImage.idx3-ubyte", "rw");
+            MnistLabelFile l = new MnistLabelFile("res/trainLabel.idx1-ubyte", "rw");
 
             for(int i = start; i <= end; i++) {
                 if(i % 100 ==  0){
