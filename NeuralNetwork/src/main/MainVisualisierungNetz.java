@@ -33,7 +33,7 @@ public class MainVisualisierungNetz {
 	//gui
 	static double updateRateV1 = 0.0001;
 	static double updateRateV2 = 0.0001;
-	static int aufloesungV2 = 40;
+	static int aufloesungV2 = 30;
 
 
 	/*Zufaellige Daten
