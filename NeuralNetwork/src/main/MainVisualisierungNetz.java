@@ -28,7 +28,7 @@ public class MainVisualisierungNetz {
 	//neuronales Netz
 	static int anzahlHiddenLayer = 1;
 	static int anzahlHiddenNeuron = 2;
-	static double lernrate = 0.001;
+	static double lernrate = 0.0001;
 	
 	//gui
 	static double updateRateV1 = 0.0001;

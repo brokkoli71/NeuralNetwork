@@ -18,7 +18,7 @@ import neuronalesNetz.Netz;
 public class MainMnist {
 	
 	/*	zum Zeichnen im Panel muss einmal geklickt werden um zu zeichen und ein weiteres Mal um das Zeichnen zu beenden
-	 * 	mit enter wird bestätigt und die Zeichnung zentriert und klassifiziert
+	 * 	mit enter wird bestï¿½tigt und die Zeichnung zentriert und klassifiziert
 	 * 	c -> clear
 	 */
 	
@@ -103,11 +103,11 @@ public class MainMnist {
 	
 	private static void setup(JFrame f) {
 		f.setVisible(true);
-		f.setSize(1000, 250);
-		f.setLocation(700, 300);
+		f.setSize(700, 150);
+		f.setLocation(0, 300);
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		l = new JLabel();
-		l.setFont(new Font("", 0, 100));
+		l.setFont(new Font("", 0, 50));
 		f.add(l);
 	}
 

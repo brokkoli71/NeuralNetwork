@@ -35,7 +35,7 @@ public class Netz2d extends JFrame{
 	public Netz2d(int countPixelX, int countPixelY) {
 		COUNTPIXELX = countPixelX;
 		COUNTPIXELY = countPixelY;
-		setSize(1000, 1000/COUNTPIXELY*COUNTPIXELX);
+		setSize(700, 700/COUNTPIXELY*COUNTPIXELX);
 
 		
 		JPanel panel = new JPanel();
