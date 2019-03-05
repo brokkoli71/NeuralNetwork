@@ -44,9 +44,18 @@ public class Visualisation extends JFrame{
 		for (int i = 0; i < allWeights.size(); i++) {
 			g.lines.get(i).setWert(allWeights.get(i));
 		}
-		for (int i = 0; i < allNeurons.size(); i++) {
-			g.neurons.get(i).setWert(allNeurons.get(i));
+		for (int i = 0; i < allBias.size(); i++) {
+			Double w = allBias.get(i);
+			if (w>1) 
+				w = 1d;
+			if (w<0)
+				w = 0d;
+			g.neurons.get(i).setWert(w);
 		}
+		
+//		for (int i = 0; i < allNeurons.size(); i++) {
+//			g.neurons.get(i).setWert(allNeurons.get(i));
+//		}
 		for (int i = 0; i < allBias.size(); i++) {
 			g.neurons.get(i).setBias(allBias.get(i));
 		}

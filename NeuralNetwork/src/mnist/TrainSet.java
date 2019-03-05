@@ -18,10 +18,16 @@ public class TrainSet {
         this.INPUT_SIZE = 28 * 28;
         this.OUTPUT_SIZE = 10; 
         
-
-
-            MnistImageFile m = new MnistImageFile("res/trainImage.idx3-ubyte", "rw");
-            MnistLabelFile l = new MnistLabelFile("res/trainLabel.idx1-ubyte", "rw");
+        MnistImageFile m;
+        MnistLabelFile l;
+        	try {
+        		 m = new MnistImageFile("res/trainImage.idx3-ubyte", "rw");
+                 l = new MnistLabelFile("res/trainLabel.idx1-ubyte", "rw");
+        	}catch (IOException e) {
+        		m = new MnistImageFile("trainImage.idx3-ubyte", "rw");
+        		l = new MnistLabelFile("trainLabel.idx1-ubyte", "rw");
+			}
+           
 
             for(int i = start; i <= end; i++) {
                 if(i % 100 ==  0){

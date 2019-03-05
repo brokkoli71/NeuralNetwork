@@ -2,6 +2,9 @@ package main;
 
 import java.awt.Font;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Random;
 
 import javax.swing.JFrame;
@@ -39,7 +42,9 @@ public class MainMnist {
     		l.setText("preparing testSet");
             testSet = new TrainSet(31000,30999+testSetSize);
 		} catch (IOException e) {
-			l.setText("Fehler beim Lesen der Datei");
+			l.setFont(new Font("", 0, 50));
+			f.setSize(1700, f.getHeight());
+			l.setText("insert \"trainImage.idx3-ubyte\" and \"trainLabel.idx1-ubyte\" into this directory");
 			return;
 		}
 		

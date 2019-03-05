@@ -88,9 +88,15 @@ public class Grafik extends JPanel{
   		}
         
         for (Neuron n : neurons) {
-        	g.setColor(new Color(1-(float) n.getWert(), 1-(float) n.getWert(), 1-(float) n.getWert())); 
+        	double w = n.getWert()*2-1;
+        	if (w<0) {
+        		g.setColor(new Color( 1,  (float)(1+w), (float) (1+w)));
+			}else {
+				g.setColor(new Color( (float)(1-w),  (float)(1-w), 1));
+			}
+        	//g.setColor(new Color(1-(float) n.getWert(), 1-(float) n.getWert(), 1-(float) n.getWert())); 
 			g.fillOval(n.getX1(), n.getY1(), n.getX2(), n.getY2());
-			g.setColor(Color.red);
+			g.setColor(Color.black);
 			g.drawString(Double.toString(n.getWert()), n.getTextPoint().x, n.getTextPoint().y);
 			g.drawString((n.getBias()>=0?"  +":"  ") + Double.toString(n.getBias()), n.getTextPoint().x, n.getTextPoint().y + 10);
 			
