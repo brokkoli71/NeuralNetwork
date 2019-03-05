@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import gui.Netz2d;
+import gui.Visualisation;
 import mnist.TrainSet;
 import neuronalesNetz.Netz;
 
@@ -26,7 +27,6 @@ public class MainMnist {
 	public static int testSetSize = 1000;
 	public static Netz netz;
 	public static JLabel l;
-
 	public static void main(String[] args) {
 		Netz2d n = new Netz2d(28, 28);
 		JFrame f = new JFrame();
@@ -35,7 +35,7 @@ public class MainMnist {
 		
 		netz = new Netz(784, 70, 1, 10); 
         netz.LERNRATE = 0.01;
-        
+
         try {
         	l.setText("preparing trainSet");
     		set = new TrainSet(0,setSize-1);

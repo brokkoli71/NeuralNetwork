@@ -26,8 +26,8 @@ public class MainVisualisierungNetz {
 	//veraenderbare Groessen:
 	
 	//neuronales Netz
-	static int anzahlHiddenLayer = 1;
-	static int anzahlHiddenNeuron = 2;
+	static int anzahlHiddenLayer = 2;
+	static int anzahlHiddenNeuron = 3;
 	static double lernrate = 0.001;
 	
 	//gui
@@ -36,18 +36,19 @@ public class MainVisualisierungNetz {
 	static int aufloesungV2 = 30;
 
 
-	/*Zufaellige Daten
+	//Zufaellige Daten
 	
 	//training Data
 	static int anzahlPunkte = 10;
 		
 	static TrainingData trainingData = new TrainingData(2, 1, anzahlPunkte);
-	*/
+	
 	
 	
 	//Beispieldaten
-	static TrainingData trainingData = TrainingData.getTestData(0);
+//	static TrainingData trainingData = TrainingData.getTestData(0);
 
+	
 	static boolean training = true;
 	
 
